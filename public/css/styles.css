@@ -5,11 +5,17 @@
 
 html{
     font-size: 62.5%; /* 1rem = 10px*/
+    min-width: 200px;
+}
+
+.active {
+    background-color: rgb(28, 25, 54);
 }
 
 .rows{
     display:flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .cols{
@@ -32,6 +38,21 @@ html{
 .strip-link{
     text-decoration: none;
 }
+.slideshow{
+    height: 100%;
+    border-radius: 5px;
+}
+.image{
+    display: block;
+    width:100%;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    max-height: 100%;
+    border-radius:5px;
+}
 
 footer{
     display: flex;
@@ -42,6 +63,7 @@ footer{
     margin-top: 3.5rem; 
     padding: 1% 2%;
     font-size: 1.2rem;
+    background-color: #272631;
 }
 
 footer a:link{
@@ -66,8 +88,10 @@ footer > *{
 }
 
 footer .links{
-    margin: auto;
     width: auto;
+}
+footer .links a:hover{
+    color: white;
 }
 
 footer .links > *{

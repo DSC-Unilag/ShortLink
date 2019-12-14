@@ -18,9 +18,10 @@ header{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #fafafc;
+    /*background-color: #fafafc;*/
     box-shadow: 1px 1px 2px #e0e0e5;
     padding: 0.5rem 1rem;
+    background: #27263f;
 }
 
 header h1{
@@ -43,12 +44,13 @@ main{
     display: flex;
     flex-direction: row;
     width: 80%;
-    /* border: 1px solid brown; */
+    height: 80%;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
 }
 
 .dashboard .dashboard-panel{
     display: flex;
-    flex-direction: column;
+    flex-flow:wrap column;
     padding: 2rem;
     width: 25%;
     min-width: 200px;
@@ -66,6 +68,7 @@ main{
     flex-direction: column;
     padding: 0;
     list-style-type: none;
+
 }
 
 .dashboard-panel .panel-content li{
@@ -73,6 +76,8 @@ main{
     font-size: 1.5rem;
     padding: 1rem 0.8rem;
     border-radius: 2px;
+    cursor: pointer;
+    margin-top:0.5em;
 }
 
 .dashboard-panel .panel-content > *:hover{
@@ -87,12 +92,13 @@ main{
 .dashboard-body .body-header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     background-color: #fdfdfe;
     padding: 0.5rem;
     padding-right: 1rem;
     box-shadow: 0 1px 2px #e0e0e5;
+    height: 50px;
 }
 
 .body-header > div:nth-child(2){
@@ -119,18 +125,22 @@ main{
 
 .dashboard-body .body-content{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: wrap row;
     justify-content: space-between;
+    height: 50%;
 }
 
 .body-content .pane{
     margin: 1rem 1%;
     width: 31.33%;
-    height: 180px;
+    height: calc(100% - 50px);
     border-radius: 5px;
     background-color: #fdfdfe;
     box-shadow: 1px 1px 2px #e0e0e5;
+}
+
+.pane2{
+    width: calc(32% * 2)!important;
 }
 
 footer{
@@ -180,13 +190,14 @@ footer{
     }
     
     .dashboard-panel .panel-content{
-        flex-direction: row;
+        flex-flow: wrap row;
     }
     
     .dashboard-panel .panel-content li{
         font-size: 1.3rem;
         padding: 0.5rem 0.8rem;
         border-radius: 2px;
+        margin-right:0.5em;
     }
     
     .dashboard .dashboard-body{
@@ -201,4 +212,8 @@ footer{
         border-radius: 5px;
         box-shadow: 1px 1px 2px #e0e0e5;
     }
+    .pane2{
+    width: 100% !important;
+
+}
 }
