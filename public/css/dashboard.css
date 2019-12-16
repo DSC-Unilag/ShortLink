@@ -18,10 +18,9 @@ header{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /*background-color: #fafafc;*/
+    background-color: #fafafc;
     box-shadow: 1px 1px 2px #e0e0e5;
     padding: 0.5rem 1rem;
-    background: #27263f;
 }
 
 header h1{
@@ -81,7 +80,7 @@ main{
 }
 
 .dashboard-panel .panel-content > *:hover{
-    background-color: rgb(28, 25, 54);
+    background-color: rgba(28, 25, 54,0.4);
 }
 
 .dashboard .dashboard-body{
@@ -136,7 +135,7 @@ main{
     height: calc(100% - 50px);
     border-radius: 5px;
     background-color: #fdfdfe;
-    box-shadow: 1px 1px 2px #e0e0e5;
+    box-shadow: 1px 1px 5px 2px #e0e0e5;
 }
 
 .pane2{

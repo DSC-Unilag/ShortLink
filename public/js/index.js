@@ -1,4 +1,4 @@
-const srcs = [
+const sources = [
 // links to all images goes here
 	'./assets/slide-images/0.jpeg',
 	'./assets/slide-images/1.jpeg',
@@ -7,7 +7,7 @@ const srcs = [
 ]
 // This function adds images to the slideshow
 
-function addToslide(srcs){
+function addToSlide(srcs){
 	const slideCont = document.querySelector('div.slideshow')
 	srcs.forEach((src,i) => {
 		const image = document.createElement('img');
@@ -16,8 +16,7 @@ function addToslide(srcs){
 		slideCont.appendChild(image);
 	})
 }
-
-addToslide(srcs);
+addToSlide(sources);
 
 // ---------------------------slide show functionality using jquery--------------------------------------
 (function ($) {
@@ -55,7 +54,7 @@ addToslide(srcs);
 
 // ----------------------------------------------------------------------------------------------------------------
 
-// To highlight an active panel item *note: EXPERIMENTAL*
+//----------- To highlight an active panel --------item *EXPERIMENTAL*
 function highlight(e){
 	let list = Array.from(ul.children)
 	list.forEach((child,i)=>{
